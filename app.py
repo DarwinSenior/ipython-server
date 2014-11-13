@@ -13,22 +13,22 @@ app = Flask(__name__, static_url_path="")
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 # db = SQLAlchemy(app)
 
-class User(db.model):
-	username = db.Column(db.String(80), unique=True, primary_key=True)
-	password = db.Column(db.String(80), unique=True)
-	port = db.Column(db.Integer)
+# class User(db.model):
+# 	username = db.Column(db.String(80), unique=True, primary_key=True)
+# 	password = db.Column(db.String(80), unique=True)
+# 	port = db.Column(db.Integer)
 
-	def __init__(self, username, password):
-		self.username = username;
-		self.password = password;
+# 	def __init__(self, username, password):
+# 		self.username = username;
+# 		self.password = password;
 
 
 def check_username(username):
 	return (username in ["bigdog", "dyue2"])
 
 def open_ipython(username):
-	port = 
-	return "http://%s:%d"%(my_ip, 8888);
+	port = 8888
+	return "http://%s:%d"%(my_ip, port);
 
 
 @app.route("/")
